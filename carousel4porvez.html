@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel 4 por vez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .grid-item {
+            flex: 0 0 25%; /* 4 imagens por vez */
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Carousel de 53 Imagens</h1>
+<div class="carousel">
+    <div class="carousel-inner">
+        <!-- Imagens de 1 a infinito -->
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+1" alt="Imagem 1"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+2" alt="Imagem 2"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/3357FF/FFFFFF?text=Imagem+3" alt="Imagem 3"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FFFF33/FFFFFF?text=Imagem+4" alt="Imagem 4"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF33FF/FFFFFF?text=Imagem+5" alt="Imagem 5"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FFFF/FFFFFF?text=Imagem+6" alt="Imagem 6"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+7" alt="Imagem 7"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+8" alt="Imagem 8"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+9" alt="Imagem 9"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+10" alt="Imagem 10"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/3357FF/FFFFFF?text=Imagem+11" alt="Imagem 11"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FFFF33/FFFFFF?text=Imagem+12" alt="Imagem 12"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF33FF/FFFFFF?text=Imagem+13" alt="Imagem 13"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FFFF/FFFFFF?text=Imagem+14" alt="Imagem 14"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+15" alt="Imagem 15"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+16" alt="Imagem 16"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+17" alt="Imagem 17"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+18" alt="Imagem 18"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/3357FF/FFFFFF?text=Imagem+19" alt="Imagem 19"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FFFF33/FFFFFF?text=Imagem+20" alt="Imagem 20"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF33FF/FFFFFF?text=Imagem+21" alt="Imagem 21"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FFFF/FFFFFF?text=Imagem+22" alt="Imagem 22"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+23" alt="Imagem 23"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+24" alt="Imagem 24"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+25" alt="Imagem 25"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+26" alt="Imagem 26"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/3357FF/FFFFFF?text=Imagem+27" alt="Imagem 27"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FFFF33/FFFFFF?text=Imagem+28" alt="Imagem 28"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF33FF/FFFFFF?text=Imagem+29" alt="Imagem 29"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FFFF/FFFFFF?text=Imagem+30" alt="Imagem 30"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+31" alt="Imagem 31"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+32" alt="Imagem 32"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+33" alt="Imagem 33"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+34" alt="Imagem 34"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/3357FF/FFFFFF?text=Imagem+35" alt="Imagem 35"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FFFF33/FFFFFF?text=Imagem+36" alt="Imagem 36"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF33FF/FFFFFF?text=Imagem+37" alt="Imagem 37"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FFFF/FFFFFF?text=Imagem+38" alt="Imagem 38"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Imagem+39" alt="Imagem 39"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Imagem+40" alt="Imagem 40"></div>
+        </div>
+    </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slidesToShow = 4; 
+    const items = document.querySelectorAll('.grid-item');
+
+    function showSlide(index) {
+        const totalItems = items.length;
+        currentIndex = Math.max(0, Math.min(index, totalItems - slidesToShow));
+        const offset = -(currentIndex * (100 / slidesToShow));
+        document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        if (currentIndex + slidesToShow < items.length) {
+            showSlide(currentIndex + slidesToShow); 
+        } else {
+            showSlide(items.length - slidesToShow); 
+        }
+    }
+
+    function prevSlide() {
+        if (currentIndex - slidesToShow >= 0) {
+            showSlide(currentIndex - slidesToShow); 
+        } else {
+            showSlide(0); 
+        }
+    }
+</script>
+
+</body>
+</html>
