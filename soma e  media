@@ -1,0 +1,13 @@
+'''quantos valores ele deseja somar, depois solicite a entrada desses números e em seguida exiba a soma e a média entre eles. '''
+media=0
+soma=0
+contador = 0
+negativos = 0 
+quantidade=int(input("Digite quantos valores deseja somar"))
+
+while contador <quantidade:
+    numero = float(input("Digite o numero "))
+    contador+=1
+    soma+=numero
+    media+=(numero/quantidade)
+print ("foram ", contador," entradas, a soma entre elas é ", soma," a media entre elas é ", media)
