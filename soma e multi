@@ -1,0 +1,21 @@
+'''Faça um Programa que leia um vetor de 5 números inteiros, mostre a soma, a multiplicação e os números.'''
+
+# Inicializa um vetor vazio
+numeros = []
+
+# Lê 5 números inteiros
+for i in range(5): #for in range - looping com sequencia definida, o range define a sequencia e o for define o looping
+    num = int(input(f"Digite o {i + 1}º número: ")) #imputa o numero
+    numeros.append(num)  # Adiciona o num imputado a lista numeros
+
+# Calcula a soma e a multiplicação
+soma = sum(numeros)  # Soma todos os elementos da lista
+multiplicacao = 1
+
+for num in numeros: #for inicia o looping, num é a variavel que controla o looping, in é a chave que indica que num esta iterando em numeros, numeros é a lista que esta sendo iterada.
+    multiplicacao *= num  # Multiplica os números e grava na multiplicacao
+
+# Exibe os resultados
+print("Números:", numeros)
+print("Soma:", soma)
+print("Multiplicação:", multiplicacao)
