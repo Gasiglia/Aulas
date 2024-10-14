@@ -1,0 +1,22 @@
+'''peça quatro notas de 3 alunos, calcule e armazene num vetor a média de cada aluno, imprima o número de alunos com média maior ou igual a 7.0'''
+
+medias = []
+
+# Loop para cada aluno
+for i in range(3):
+    soma = 0
+    # Loop para pedir 4 notas de cada aluno
+    for j in range(4): #for in range - looping com sequencia definida, o range define a sequencia e o for define 
+        nota = float(input(f"Digite a nota {j + 1} do aluno {i + 1}: "))
+        soma += nota  # Soma as notas
+    media = soma / 4  # Calcula a média
+    medias.append(media)  # Armazena a média na lista
+
+# Imprime as médias
+print("Médias dos alunos:", medias)
+
+# Contagem de alunos com média maior ou igual a 7.0
+contador = sum(1 for media in medias if media >= 7.0)
+
+# Imprime o número de alunos com média maior ou igual a 7.0
+print(f"Número de alunos com média maior ou igual a 7.0: {contador}")
