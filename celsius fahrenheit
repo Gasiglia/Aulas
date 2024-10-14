@@ -1,0 +1,14 @@
+'''Desenvolva um programa solicite uma temperatura e a escala. Depois converta a temperatura de Celsius para Fahrenheit e vice-versa, até que o usuário decida parar.'''
+fares = 1
+
+while fares != 0:
+    fares=int(input("Digite 1 para ver em Celsius ou 2 para ver em Fahrenheit ou 0 para parar"))
+    if fares == 2:
+        numero=int(input("Digite temperatura"))
+        f=((1.8*numero)+32)
+        print ("VALOR EM Fahrenheit",f)
+        
+    elif fares == 1:
+        numero=int(input("Digite temperatura"))
+        f=((numero-32)/1.8)
+        print ("VALOR EM Celsius",f)
