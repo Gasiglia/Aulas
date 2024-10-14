@@ -1,0 +1,29 @@
+'''Faça um Programa que leia um vetor de 10 caracteres, e diga quantas consoantes foram lidas. Imprima as consoantes.'''
+
+# lista para armazenar os caracteres
+caracteres = []
+
+# Lê 10 caracteres
+for i in range(10): #for in range - looping com sequencia definida, o range define a sequencia e o for define o looping
+    char = input(f"Digite o {i + 1}º caractere: ") #imputa o valor(vogal/consoante)
+    # Certifica-se de que o usuário digite apenas um caractere
+    while len(char) != 1:#define que só pode digitar um caracter
+        char = input("Por favor, digite apenas um caractere: ") #caso seja diferente de 1 caractere, pede que redigite
+    caracteres.append(char)#caso tenha apenas um caractere adiciona a lista caracteres
+
+# variáveis para contar as consoantes e armazená-las
+consoantes = []
+contador_consoantes = 0
+
+# Conjunto de vogais para referência
+vogais = "aeiouAEIOU"
+
+for char in caracteres: #for inicia o looping, char é a variavel que controla o looping, in é a chave que indica que num esta iterando em caracteres, caracteres é a lista que esta sendo iterada.
+    # Verifica se é uma letra e não é uma vogal
+    if ('a' <= char <= 'z' or 'A' <= char <= 'Z') and char not in vogais:# se houver a-z minusculo ou maiusculo em char, "and" e "char not in vogais" nao esta em vogais, 
+        consoantes.append(char)# deve adicionar char a lista consoantes
+        contador_consoantes += 1 # soma um a lista de consoantes
+
+# Imprime os resultados
+print("Consoantes lidas:", consoantes)
+print("Número de consoantes:", contador_consoantes)
