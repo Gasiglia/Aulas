@@ -1,0 +1,9 @@
+'''inserir um número e um limite e mostre a tabuada de multiplicação desse número até o limite.'''
+
+numero=int(input("Digite um numero"))
+limite=int(input("digite um limite"))
+pares=1
+while pares <=limite:
+    resultado=numero*pares
+    print(numero, "x", pares, " - ",resultado)
+    pares+=1
