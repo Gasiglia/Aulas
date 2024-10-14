@@ -1,0 +1,18 @@
+''' imprima um triângulo de números, onde cada linha tem um número a mais que a anterior, até um número n fornecido pelo usuário'''
+limite = int(input("Digite um limite: "))
+inicio = 0
+#quando o inicio é menor que o limite imputado deve repetir
+while inicio < limite:
+    #Ele ganha 1 ate parar
+    inicio += 1
+    #Inicia a proxima variavel
+    resultado = 1
+    #quando o valor é menor igual que o inicio deve repetir 
+    while resultado <= inicio:
+        #imprime o valor e vai pro fim inserindo espaço em branco
+        print(resultado, end=' ')
+        #ele ganha 1 ate parar
+        resultado += 1
+    
+    # Pula para a próxima linha
+    print()
