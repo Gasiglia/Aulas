@@ -1,0 +1,17 @@
+''' imprima um triângulo de números, onde cada linha tem um número a mais que a anterior, até um número n fornecido pelo usuário'''
+limite = int(input("Digite a quantidade de estrelas para a grade: "))
+inicio = 0
+#quando o inicio é menor que o limite imputado deve repetir
+while inicio < limite:
+    #Ele ganha 1 ate parar
+    inicio += 1
+    #Inicia a proxima variavel
+    resultado = 0
+    #quando o valor é menor que o limite deve repetir 
+    while resultado < limite:
+        #imprime a estrela e vai pro fim inserindo espaço em branco
+        print('*', end=' ')
+        #ele ganha 1 ate parar
+        resultado += 1
+    # Pula para a próxima linha
+    print()
