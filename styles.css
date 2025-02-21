@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('Ruido.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fixed-image {
+    flex: 1;
+    max-width: 500px;
+    margin-right: 20px;
+}
+
+.carousel {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.grid-item {
+    flex: 0 0 33.33%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Media Query para telas menores (dispositivos móveis) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fixed-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .carousel {
+        flex: 1;
+        width: 100%;
+    }
+
+    .grid-item {
+        flex: 0 0 50%; /* 2 cards por linha */
+    }
+}
+
+/* Media Query para telas muito pequenas (dispositivos móveis muito pequenos) */
+@media (max-width: 480px) {
+    .grid-item {
+        flex: 0 0 100%; /* 1 card por linha */
+    }
+
+    .fixed-image {
+        max-width: 100%;
+    }
+}
